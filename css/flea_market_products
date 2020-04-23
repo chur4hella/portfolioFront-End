@@ -1,0 +1,388 @@
+@blue: #004d99;
+@blue-light-1: #0069cf;
+@blue-light-2: #007cf5;
+@blue-a: rgba(0, 124, 245, .8);
+@purple: #800080;
+@purple-a: rgba(128, 0, 128, .8);
+@orange: #e26806;
+@orange-a: rgba(226,  104, 6, .8);
+@orange-light-1: #f87306;
+@red: #e40a0c;
+@red-a: rgba(228, 10, 12, .8);
+@green: #00bf00;
+@green-a: rgba(0, 191, 0, .8);
+@green-light-1: #00d500;
+@green-darken-1: #009d00;
+@gray: #888888;
+@gray-a: rgba(76, 76, 76, .7);
+@gray-a-1: rgba(0, 0, 0, 0.7);
+@gray-darken-1: #878787;
+@gray-darken-2: #797979;
+@gray-darken-3: #565656;
+@gray-darken-4: #373737;
+@gray-darken-5: #222222;
+@gray-light-1: #a8a8a8;
+@gray-light-2: #c7c7c7;
+@gray-light-3: #e3e3e3;
+@gray-light-4: #f2f2f2;
+@shadow: 0px 2px 5px 0px rgba(0,0,0,0.50);
+@shadow-1: 0px 1px 3px 0px rgba(0,0,0,0.40);
+@shadow-2: 0px 1px 1px 0px rgba(0,0,0,0.30);
+@text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'] {
+  -moz-appearance:textfield;
+}
+
+.main{
+  &-content{
+    display: flex;
+    //justify-content: space-between;
+    flex-wrap: wrap;
+
+    &-up{
+      width: 100%;
+      border-bottom: 1px solid @gray-light-3;
+    }
+
+    &-filter{
+      padding: 15px 15px 0 0;
+      width: 20%;
+      box-sizing: border-box;
+    }
+
+    &-products{
+      width: 80%;
+      border-left: 1px solid @gray-light-3;
+      box-sizing: border-box;
+    }
+  }
+}
+
+//for main-content-filter
+.filter{
+
+  &-row{
+    margin-bottom: 15px;
+
+    &-title{
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    &-item{
+      margin-bottom: 10px;
+    }
+
+    &-group{
+      display: flex;
+    }
+  }
+
+  &-btn{
+    font-size: 15px;
+    font-weight: 600;
+    width: 100%;
+    padding: 9px 0;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+
+    &__search{
+      background-color: @green;
+
+      &:hover{
+        background-color: @green-darken-1;
+      }
+    }
+
+    &__clear{
+      background-color: @orange-light-1;
+
+      &:hover{
+        background-color: @orange;
+      }
+    }
+  }
+}
+
+.text-field,
+.number-field,
+.select{
+  padding: 7px;
+  border: 1px solid @gray-light-2;
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box;
+
+  &:hover{
+    border-color: @gray-darken-1;
+  }
+
+  &:focus{
+    border-color: @gray-darken-2;
+  }
+}
+
+.select,
+.text-field__search{
+  width: 100%;
+}
+
+.select{
+  color: @gray-darken-1;
+  background-color: transparent;
+}
+
+.number-field{
+
+  &__price{
+    width: 50%;
+
+    &_left{
+      border-radius: 4px 0 0 4px;
+    }
+
+    &_right{
+      border-radius: 0 4px 4px 0;
+    }
+  }
+}
+
+.checkbox-btn{
+  display: none;
+}
+
+.label-btn{
+  display: block;
+  text-align: center;
+  background-color: @gray-light-2;
+  padding: 9px 0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 1px solid @gray-light-1;
+  cursor: pointer;
+
+  &:hover{
+    background-color: @gray-light-1;
+  }
+
+  &--active{
+    background-color: @gray;
+  }
+}
+
+//for main-content-products
+.products{
+  &-item{
+    display: flex;
+    color: black;
+    padding: 15px;
+    border-bottom: 1px solid @gray-light-3;
+
+    &:hover .product-title{
+      color: @red;
+    }
+
+    &-img{
+      position: relative;
+    }
+
+    &-info{
+      margin-left: 15px;
+    }
+  }
+}
+
+.product-upped,
+.product-city,
+.product-title,
+.product-price{
+  margin-bottom: 10px;
+}
+
+
+
+.product{
+
+  &-upped,
+  &-city{
+    display: flex;
+    align-items: center;
+
+    &-ico{
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+      background-image: url("../img/for_flea_market/d2155a654493868b76b2eb4df6318446.png");
+      background-repeat: no-repeat;
+      background-size: 14px 16px;
+      background-position: 0 50%;
+    }
+
+    &-txt{
+      font-size: 13px;
+      color: @gray-light-1;
+    }
+  }
+
+  &-img{
+    display: block;
+    width: 300px;
+    border-radius: 4px;
+  }
+
+  &-title{
+    font-weight: 700;
+    -webkit-transition: color 0.2s linear;
+    -moz-transition: color 0.2s linear;
+    -ms-transition: color 0.2s linear;
+    -o-transition: color 0.2s linear;
+    transition: color 0.2s linear;
+  }
+
+  &-price{
+    display: flex;
+    align-items: center;
+
+    &-BYN{
+      position: relative;
+      color: white;
+      font-weight: 700;
+      background-color: @green-light-1;
+      padding: 7px 15px;
+      border-radius: 2px;
+
+      &:before,
+      &:after{
+        content: '';
+        position: absolute;
+      }
+
+      &:after{
+        top: 4px;
+        right: -12px;
+        width: 27px;
+        height: 27px;
+        background-color: @green-light-1;
+        border-radius: 4px;
+        transform: rotate(45deg);
+      }
+
+      &:before{
+        width: 6px;
+        height: 6px;
+        background-color: white;
+        border-radius: 50%;
+        top: 50%;
+        left: 100%;
+        margin-top: -3px;
+        z-index: 1;
+      }
+    }
+
+    &-other{
+      font-size: 13px;
+      color: @gray;
+      margin-left: 30px;
+    }
+  }
+
+  &-city{
+
+    &-ico{
+      background-image: url("../img/for_flea_market/pin.svg");
+    }
+
+    &-txt{
+      font-size: 14px;
+      color: @gray-darken-4;
+    }
+  }
+
+  &-description{
+    position: relative;
+    font-size: 15px;
+    color: @gray-darken-5;
+    max-height: 60px;
+    overflow: hidden;
+
+    &:after{
+      position: absolute;
+      content: '';
+      height: 20px;
+      width: 80px;
+      bottom: 0;
+      right: 0;
+      background-image: linear-gradient(to right, rgba(255, 251, 235, 0) 0%, #fffbeb 100%);
+    }
+  }
+}
+
+.count-img,
+.type-ad,
+.product-bookmark{
+  position: absolute;
+  font-size: 14px;
+  color: white;
+  padding: 5px 7px;
+  border-radius: 4px;
+}
+
+.count-img{
+  left: 10px;
+  bottom: 10px;
+  background-color: @gray-a-1;
+  text-transform: lowercase;
+}
+
+.type-ad{
+  left: 10px;
+  top: 10px;
+
+  text-transform: uppercase;
+
+  &_sale{
+    background-color: @red-a;
+  }
+
+  &_buy{
+    background-color: @green-light-1;
+  }
+
+  &_exchange{
+    background-color: @purple;
+  }
+
+  &_service{
+    background-color: @blue-a;
+  }
+
+  &_rent{
+    background-color: @orange;
+  }
+
+  &_closed{
+    background-color: @gray-a-1;
+  }
+}
+
+.product-bookmark{
+  top: 10px;
+  right: 10px;
+  width: 16px;
+  height: 16px;
+  padding: 8px;
+  background-image: url("../img/for_flea_market/star (2).svg");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 50% 50%;
+
+  background-color: @gray-a-1;
+}

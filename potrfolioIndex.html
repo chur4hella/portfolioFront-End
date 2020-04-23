@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dmitry Borisevich | Junior Web Developer</title>
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/slider-styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<header class="header">
+  <div class="menu">
+    <div class="menu-btn">
+      <div class="menu-btn-line"></div>
+    </div>
+    <div class="hidden-menu">
+      <div class="hidden-menu-first">
+        <h4 class="menu-title">Projects</h4>
+        <ul class="menu-list">
+          <li class="menu-list-item"><a class="menu-list-item-lnk" href="">Flea Market</a></li><br>
+          <li class="menu-list-item"><a class="menu-list-item-lnk" href="">UFO Game</a></li><br>
+        </ul>
+      </div>
+      <div class="hidden-menu-second">
+        <h4 class="menu-title">Who created this?</h4>
+        <ul class="menu-list">
+          <li class="menu-list-item"><a class="menu-list-item-lnk" href="">About me</a></li><br>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <a class="about" href="">About me</a>
+</header>
+<main class="main">
+  <div class="slider">
+    <div class="slider__wrapper">
+      <div class="slider__items">
+        <div class="slider__item slider__item--active">
+          <div class="slider__item-content">
+            <div class="col col_left">
+              <img class="col_left-img" src="img/commerce-day.jpg">
+              <div class="col_left-blackout"></div>
+            </div>
+            <div class="col col_right col--orange">
+              <div class="content">
+                <h5>HTML/CSS/JS | Python | Django</h5>
+                <h1 class="content-title">Flea Market</h1>
+                <p class="content-text">Демо-аналог барахолки с адаптивным дизайном.</p>
+                <a class="content-about" href="">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider__item">
+          <div class="slider__item-content">
+            <div class="col col_left">
+              <img class="col_left-img" src="img/SEGA-Mega-Drive-Mini-19.jpg">
+              <div class="col_left-blackout"></div>
+            </div>
+            <div class="col col_right col--violet">
+              <div class="content">
+                <h5>HTML/CSS/JS | Django</h5>
+                <h1 class="content-title">UFO Game</h1>
+                <p class="content-text">Демо-игра, аналог игры "Охота на уток" для 8-битной приставки.</p>
+                <a class="content-about" href="">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider__item">
+          <div class="slider__item-content">
+            <div class="col col_left"></div>
+            <div class="col col_right col--green"></div>
+          </div>
+        </div>
+        <div class="slider__item">
+          <div class="slider__item-content">
+            <div class="col col_left"></div>
+            <div class="col col_right col--coral"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="slider__control slider__control_prev" href="#" role="button"></a>
+    <a class="slider__control slider__control_next slider__control_show" href="#" role="button"></a>
+  </div>
+
+  <script src="js/slider-script.js"></script>
+  <script>
+    slideShow('.slider', {
+      isAutoplay: true
+    });
+  </script>
+  <script src="js/menu.js"></script>
+</main>
+</body>
+</html>

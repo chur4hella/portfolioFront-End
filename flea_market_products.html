@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Категория | Portfolio</title>
+  <link rel="stylesheet" href="css/flea_market_base.css" type="text/css">
+  <link rel="stylesheet" href="css/flea_market_products.css" type="text/css">
+</head>
+<body>
+<main class="main">
+  <div class="main-header">
+    <div class="main-header-region">
+      <!--<div class="regions">-->
+      <div class="regions-title">
+        <b class="regions-title-label">Регион:</b>
+        <div class="regions-title-selected">
+          <span>Вся Беларусь</span>
+          <i class="regions-title-arrow"></i>
+        </div>
+      </div>
+      <div class="regions-popup">
+        <div class="regions-popup-up">
+          <ul class="regions-list">
+            <li class="regions-list-item regions-list-item--active">
+              <span>Вся Беларусь</span>
+              <small>150000</small>
+            </li>
+            <li class="regions-list-item">
+              <span>Минская</span>
+              <small>150000</small>
+            </li>
+          </ul>
+        </div>
+        <div class="regions-popup-bottom">
+          <h4 class="popup-title">Области</h4>
+          <ul class="regions-list">
+            <li class="regions-list-item">
+              <span>Минская</span>
+              <small>150000</small>
+            </li>
+            <li class="regions-list-item">
+              <span>Брестская</span>
+              <small>150000</small>
+            </li>
+            <li class="regions-list-item">
+              <span>Витебская</span>
+              <small>150000</small>
+            </li>
+            <li class="regions-list-item">
+              <span>Гомельская</span>
+              <small>150000</small>
+            </li>
+            <li class="regions-list-item">
+              <span>Гроднеская</span>
+              <small>150000</small>
+            </li>
+            <li class="regions-list-item">
+              <span>Могилевская</span>
+              <small>150000</small>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--</div>-->
+    </div>
+    <div class="main-header-options">
+      <a class="user-ads" href=""><i></i><span>Мои объявления</span></a>
+      <a class="user-ads" href=""><i></i><span>Объявления, в котрых я учавствую</span></a>
+      <a class="user-ads" href=""><i></i><span>Новое за 24 часа</span></a>
+    </div>
+  </div>
+  <div class="main-content">
+    <div class="main-content-up">
+      <h1>Категория</h1>
+      <form class="form" method="get" action="#">
+        <input class="form-inputText" type="text" name="search" autocomplete="off" placeholder="Поиск на Барахолке по всей Беларуси">
+        <button class="form-btn" value="Найти">Найти</button>
+      </form>
+      <a class="add-btn" href="#">
+        <i></i>
+        <span>Подать объявление</span>
+      </a>
+    </div>
+    <div class="main-content-filter">
+      <form class="filter">
+        <div class="filter-row">
+          <div class="filter-row-title">Название</div>
+          <input class="text-field text-field__search" name="search-category" type="text" placeholder="Напр.: samsung" autocomplete="off">
+        </div>
+        <div class="filter-row">
+          <div class="filter-row-title">Цена, BYN</div>
+          <div class="filter-row-group">
+            <input class="number-field number-field__price number-field__price_left" type="number" name="price-min" placeholder="от">
+            <input class="number-field number-field__price number-field__price_right" type="number" name="price-max" placeholder="до">
+          </div>
+        </div>
+        <div class="filter-row">
+          <div class="filter-row-title">Продавец</div>
+          <div class="filter-row-item">
+            <label class="label-btn" for="private-person">Частное лицо</label>
+            <input id="private-person" class="checkbox-btn" type="checkbox" name="private-person">
+          </div>
+          <div class="filter-row-item">
+            <label class="label-btn" for="company">Компания</label>
+            <input id="company" class="checkbox-btn" type="checkbox" name="company">
+          </div>
+        </div>
+        <div class="filter-row">
+          <div class="filter-row-title">Местонахождение</div>
+          <div class="filter-row-item">
+            <select class="select" name="region">
+              <option selected value="0">Область</option>
+            </select>
+          </div>
+          <div class="filter-row-item">
+            <select class="select" name="city">
+              <option selected value="0">Город</option>
+            </select>
+          </div>
+        </div>
+        <div class="filter-row">
+          <button class="filter-btn filter-btn__search" value="Найти">Найти</button>
+        </div>
+        <div class="filter-row">
+          <button class="filter-btn filter-btn__clear" value="Очистить">Очистить</button>
+        </div>
+      </form>
+    </div>
+    <div class="main-content-products">
+      <div class="products">
+        <a class="products-item" href="">
+          <div class="products-item-img">
+            <img class="product-img" src="img/SEGA-Mega-Drive-Mini-19.jpg">
+            <div class="count-img">7 фото</div>
+            <div class="type-ad type-ad_sale">Продажа</div>
+            <div class="product-bookmark"></div>
+          </div>
+          <div class="products-item-info">
+            <div class="product-upped">
+              <div class="product-upped-ico"></div>
+              <div class="product-upped-txt">1 минут назад</div>
+            </div>
+            <div class="product-title">Samsung</div>
+            <div class="product-price">
+              <div class="product-price-BYN">1500 р.</div>
+              <div class="product-price-other">750 $ / 700 €</div>
+            </div>
+            <div class="product-city">
+              <div class="product-city-ico"></div>
+              <div class="product-city-txt">Брест</div>
+            </div>
+            <div class="product-description">ASUS MaxPro с самой мощной батареей в идеальном состоянии. Ещё на гарантии.
+              Телефон просто бомба. 8-ядерный процессор 8*1.8Ггц Батарея 5000Mah-держит минимум двое суток. 6" FuLL HD
+              Дисплей. Оперативка 3гбт. Встроенная память 32гбт. Телефон застрахова</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+<script src="js/flea_market_index.js"></script>
+</html>
